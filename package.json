@@ -1,0 +1,38 @@
+{
+  "name": "capstone",
+  "version": "1.0.0",
+  "description": "CommentsFAQ",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "react": "^16.5.0",
+    "react-cli": "^0.3.1",
+    "sequelize": "^4.38.0",
+    "styled-components": "^3.4.5"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.2",
+    "jest": "^23.5.0",
+    "jest-enzyme": "^6.0.4",
+    "nodemon": "^1.18.4",
+    "webpack": "^4.17.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iron-Bank-of-Braavos/CommentsFAQ.git"
+  },
+  "author": "Xcidis-de",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iron-Bank-of-Braavos/CommentsFAQ/issues"
+  },
+  "homepage": "https://github.com/Iron-Bank-of-Braavos/CommentsFAQ#readme"
+}
