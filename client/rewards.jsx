@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-const comments = (props) => (
-  <a className={props.className} onClick={()=>{props.click(3)}}>
-    Comments
+const rewards = (props) => (
+  <a className={props.className} onClick={()=>{props.click(0)}}>
+    Rewards
   </a>
 )
 
-const Comments = styled(comments)`
+const Rew = styled(rewards)`
 border-bottom-color:rgb(40, 40, 40);
-border-bottom-style: ${props => props.active === 3 ? 'solid' : 'none'};
+border-bottom-style: ${props => props.active === 0 ? 'solid' : 'none'};
 border-bottom-width:2.99716px;
 border-image-outset:0px;
 border-image-repeat:stretch;
@@ -17,13 +17,13 @@ border-image-slice:100%;
 border-image-source:none;
 border-image-width:1;
 border-left-color:rgb(0, 158, 116);
-border-left-style:${props => props.active === 3 ? 'dotted' : 'none'};
+border-left-style:${props => props.active === 0 ? 'dotted' : 'none'};
 border-left-width:1px;
 border-right-color:rgb(0, 158, 116);
-border-right-style:${props => props.active === 3 ? 'dotted' : 'none'};
+border-right-style:${props => props.active === 0 ? 'dotted' : 'none'};
 border-right-width:1px;
 border-top-color:rgb(0, 158, 116);
-border-top-style:${props => props.active === 3 ? 'dotted' : 'none'};
+border-top-style:${props => props.active === 0 ? 'dotted' : 'none'};
 border-top-width:1px;
 color:rgb(40, 40, 40);
 cursor:pointer;
@@ -42,9 +42,10 @@ line-height:24px;
 margin-bottom:0px;
 margin-left:18px;
 margin-right:18px;
+margin-top:0px;
 padding-bottom:20px;
-padding-left:5px;
-padding-right:11px;
+padding-left:16px;
+padding-right:9px;
 padding-top:20px;
 text-decoration-color:rgb(40, 40, 40);
 text-decoration-line:none;
@@ -52,9 +53,9 @@ text-decoration-style:solid;
 vertical-align:baseline;
 width:64.9574px;
 -webkit-font-smoothing:antialiased;
-@media (max-width: 400px){
+@media (min-width: 640px) {
   display: none;
 }
 `
 
-export default Comments;
+export default Rew;

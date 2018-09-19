@@ -42,7 +42,7 @@ const Save = styled(save)`
   margin-bottom:0px;
   margin-left:20px;
   margin-right:10px;
-  margin-top:0px;
+  margin-top:6px;
   padding-bottom:0px;
   padding-left:0px;
   padding-right:0px;
@@ -51,6 +51,8 @@ const Save = styled(save)`
   vertical-align:baseline;
   width:auto;
   -webkit-font-smoothing:antialiased;
+  position: absolute;
+  right: 0px;
 `;
 
 export default Save

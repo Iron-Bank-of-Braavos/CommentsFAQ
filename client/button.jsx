@@ -52,6 +52,8 @@ transition-property:all;
 transition-timing-function:ease-in-out;
 vertical-align:baseline;
 width:158.452px;
+position: absolute;
+right: 88px;
 `
 
 export default MyButton

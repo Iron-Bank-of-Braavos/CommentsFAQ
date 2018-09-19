@@ -16,7 +16,7 @@ const horizon = (prevx, x) => keyframes`
 `;
 
 const Animation = styled(animate)`
-  display: ${props => props.active ? 'block' : 'none'}
+  display: ${props => props.active || props.active === 0 ? 'block' : 'none'}
   height: auto;
   width: 92px;
   margin-top: -2px;

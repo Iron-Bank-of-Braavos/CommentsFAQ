@@ -28,27 +28,67 @@ class Nav extends Component {
   constructor(props){
     super(props);
     this.state = {
-      clicked: 0,
+      clicked: undefined,
       prev: undefined,
-      margin: undefined
+      margin: undefined,
+      width: undefined
     }
     this.click = this.click.bind(this);
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    var clicked = this.state.clicked;
+    var width = window.innerWidth;
+    console.log(window.innerWidth)
+    if(width < 700 && window.innerWidth > 700 && clicked === 0){
+      clicked += 1
+      this.click(clicked)
+      this.setState({
+        clicked: clicked,
+        width: width
+      });
+    }else{
+      this.click(clicked)
+      this.setState({
+        width: width
+      })
+    }
   }
 
   click(i){
+    const margins_two = ['19px', '137px', '250px', '365px'];
     const margins = ['12px', '125px', '240px'];
     var prev = this.state.margin;
-
-    if(this.state.margin !== margins[i-1] || !prev){
+    var width = this.state.width;
+    console.log(width)
+    if(width > 700 && prev !== margins[i-1] || !prev && width >700 ){
+      console.log('ok');
       this.setState({
         clicked: i,
         margin: margins[i-1],
         prev
       });
+    }else if(this.state.margin !== margins_two[i] || !prev){
+      this.setState({
+        clicked: i,
+        margin: margins_two[i],
+        prev
+      })
     }
   }
 
   render(){
+  // pass falsey from animation to click function
     return(
       <EmptyBar>
         <Spacing>
