@@ -1,0 +1,59 @@
+{
+  "name": "capstone",
+  "version": "1.0.0",
+  "description": "CommentsFAQ",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.38.0",
+    "styled-components": "^3.4.5",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "ajv": "^6.0.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.6.0",
+    "jest-enzyme": "^6.0.4",
+    "jest-styled-components": "^6.2.0",
+    "nodemon": "^1.18.4",
+    "react": "^16.5.0",
+    "react-cli": "^0.3.1",
+    "react-dom": "^16.5.0",
+    "react-test-renderer": "^16.5.2",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon server/index.js",
+    "build": "webpack -w",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iron-Bank-of-Braavos/CommentsFAQ.git"
+  },
+  "author": "Xcidis-de",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iron-Bank-of-Braavos/CommentsFAQ/issues"
+  },
+  "homepage": "https://github.com/Iron-Bank-of-Braavos/CommentsFAQ#readme",
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>__tests__/setup/setupEnzyme.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/setup/"
+    ]
+  }
+}
