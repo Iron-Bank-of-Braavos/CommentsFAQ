@@ -40,6 +40,7 @@ class Nav extends Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
+    this.loadCamp()
   }
 
   componentWillUnmount() {
