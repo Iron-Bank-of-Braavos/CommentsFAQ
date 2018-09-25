@@ -1,0 +1,18 @@
+version: "2"
+services:
+  practice_docker:
+    image: xcidis/feccomments
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://postgres@db:5432/fvc
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=fvc
+      - POSTGRES_USER=postgres

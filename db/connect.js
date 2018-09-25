@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const db = new Sequelize(`postgres://localhost:5432/fvc`);
+const db = new Sequelize(`postgres://postgres@db:5432/fvc`);
 
 db
   .authenticate()

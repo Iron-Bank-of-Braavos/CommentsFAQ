@@ -31,7 +31,7 @@ var MessageF = ({className}) => (
 
 const Message = styled(MessageF)`
   position: absolute;
-  top: 0px;
+  top: 69px;
   left: 0px;
   padding: 1em;
   padding-top: 0;

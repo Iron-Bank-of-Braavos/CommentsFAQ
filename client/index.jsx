@@ -38,7 +38,7 @@ class App extends Component {
     this.state = {
       data: null,
       loaded: null,
-      total: Math.floor(Math.random() * 1000) + 1000,
+      total: null,
       loading: false
     }
     this.renderMessages = this.renderMessages.bind(this);
@@ -50,11 +50,15 @@ class App extends Component {
   }
 
   loadMore(){
+    let newTotal = Math.floor(Math.random() * 1000) + 1000;
+
     this.setState({
-      loading: true
+      loading: true,
+      total: newTotal
     });
-    if(this.state.loaded <= total){
-      axios.get('/comments')
+
+    if(this.state.loaded <= this.state.total){
+      axios.get('54.210.32.8:3001/comments')
         .then((res, data)=>{
           var hold = res.data;
           if(hold[0].parent_id){
@@ -127,4 +131,4 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root1'))

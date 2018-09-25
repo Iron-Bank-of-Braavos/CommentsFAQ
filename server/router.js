@@ -12,7 +12,7 @@ route.get('/comments', (req, res)=>{
     })
     .catch((err)=>{
       if(err) {
-        res.status(404);
+        res.status(404).send('ok');
       }
     });
 
