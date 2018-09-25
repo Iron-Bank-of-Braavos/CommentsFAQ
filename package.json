@@ -40,7 +40,8 @@
     "test": "jest",
     "start": "nodemon server/index.js",
     "build": "webpack -w",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "seed": "npm run seed.js"
   },
   "repository": {
     "type": "git",

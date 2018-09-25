@@ -1,5 +1,9 @@
 const Sequelize = require('sequelize');
-const db = new Sequelize(`postgres://postgres@db:5432/fvc`);
+const db = new Sequelize('fvc', 'postgres', 'pw', {
+  host: 'localhost',
+  port: 5432,
+  dialect: 'postgres'
+})
 
 db
   .authenticate()

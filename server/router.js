@@ -1,5 +1,6 @@
 const route = require('express').Router();
 const {db} = require('../db/connect.js');
+// const {schema} = require('../db/schema.js');
 const _ = require('underscore');
 
 route.get('/comments', (req, res)=>{
@@ -12,7 +13,7 @@ route.get('/comments', (req, res)=>{
     })
     .catch((err)=>{
       if(err) {
-        res.status(404).send('ok');
+        res.send('ok');
       }
     });
 

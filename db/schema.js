@@ -1,7 +1,6 @@
 const {db} = require('./connect.js');
 const Sequelize = require('sequelize');
-const messages = require('../data.json');
-const fs = require('fs');
+// const messages = require('../data.json');
 
 const Messages = db.define('messages', {
   message_id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true, allowNull: false },
@@ -10,9 +9,8 @@ const Messages = db.define('messages', {
   parent_id: { type: Sequelize.INTEGER, allowNull: true },
   name: { type: Sequelize.STRING, allowNull: false}
 });
-fs.readFileSync('data.json', (err, data)=>{
-  //seed data here
-})
+
+
 module.exports = {
   Messages
 }

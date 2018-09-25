@@ -10,7 +10,7 @@ services:
       SEQ_DB: fvc
       SEQ_USER: POSTGRES_DB
       PORT: 3001
-      DATABASE_URL: postgres://postgres@db:5432/fvc
+      DATABASE_URL: postgres://postgres:pw@db:5432/fvc
   db:
     image: postgres
     restart: always
