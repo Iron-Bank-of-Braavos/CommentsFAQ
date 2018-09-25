@@ -7,7 +7,10 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://postgres@db:5432/fvc
+      SEQ_DB: fvc
+      SEQ_USER: POSTGRES_DB
+      PORT: 3001
+      DATABASE_URL: postgres://postgres@db:5432/fvc
   db:
     image: postgres
     restart: always

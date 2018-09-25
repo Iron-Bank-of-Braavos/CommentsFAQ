@@ -58,7 +58,7 @@ class App extends Component {
     });
 
     if(this.state.loaded <= this.state.total){
-      axios.get('54.210.32.8:3001/comments')
+      axios.get('35.170.244.26:3001/comments')
         .then((res, data)=>{
           var hold = res.data;
           if(hold[0].parent_id){
